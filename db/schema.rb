@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121126005648) do
+ActiveRecord::Schema.define(:version => 20121202234534) do
+
+  create_table "card_collections", :force => true do |t|
+    t.string   "permalink"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "cards", :force => true do |t|
     t.string   "reference"
