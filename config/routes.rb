@@ -1,4 +1,10 @@
 Memorizer::Application.routes.draw do
+  match 'card_collections' => 'card_collections#create', :via => :post
+
+  match 'card_collections' => 'card_collections#index', :via => :get
+
+  match "card_collections/:id" => 'card_collections#show', :via => :get
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
